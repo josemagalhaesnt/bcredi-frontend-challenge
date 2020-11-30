@@ -1,4 +1,4 @@
-<img src="logo.svg" width="120" alt="Bcredi">
+<img src="./app/src/assets/img/logo.svg" width="120" alt="Bcredi">
 
 # Bcredi Front-end Challenge
 
