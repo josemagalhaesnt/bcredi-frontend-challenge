@@ -12,3 +12,14 @@ body {
 a {
     color: inherit;
 }
+
+.App {
+    width: 100%;
+    display: flex;
+}
+
+.Main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
