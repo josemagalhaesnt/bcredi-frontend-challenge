@@ -1,16 +1,17 @@
 import React from 'react';
+import { PropTypes } from 'prop-types';
+import { FormContainer, FormGroup } from './styles';
 
-import { FormContainer, FormGroup} from './styles';
-import FormField from './FormField';
-
-const Form = () => {
+const Form = ({ children }) => {
   return (
     <FormContainer className="Form">
-      <FormGroup>
-        <FormField label="Nome" type="text" placeholder="Digite seu nome Completo" />
-      </FormGroup>
+      <FormGroup>{children}</FormGroup>
     </FormContainer>
   );
+};
+
+Form.propTypes = {
+  children: PropTypes.oneOf([PropTypes.node, PropTypes.arrayOf(PropTypes.node)]).isRequired,
 };
 
 export default Form;

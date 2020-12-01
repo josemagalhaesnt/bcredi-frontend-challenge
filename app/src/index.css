@@ -3,6 +3,11 @@
     font-family: 'Roboto', sans-serif;
 }
 
+:root {
+    --warm-grey: #8f8f8f;
+    --pinkish-grey: #cccccc;
+}
+
 html,
 body {
     margin: 0;
@@ -18,8 +23,6 @@ a {
     display: flex;
 }
 
-.Main {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+.Main { 
+  width: 100%;
 }
