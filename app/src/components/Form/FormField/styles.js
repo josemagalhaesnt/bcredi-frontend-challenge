@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const FieldContainer = styled.div`
   display: flex;
-  flex: 1 0 300px;
+  flex: 1 0 auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;

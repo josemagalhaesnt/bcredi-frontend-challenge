@@ -1,8 +1,16 @@
 import React from 'react';
+import { useMediaQuery } from 'react-responsive';
+import breakpoints from '../../constants';
 
-import { CadastroSection, SectionTitle, SectionSubTitle } from './styles';
-import Form from '../../components/Form';
-import FormField from '../../components/Form/FormField';
+import {
+  CadastroContainer,
+  CadastroFormSection,
+  SectionTitle,
+  SectionSubTitle,
+} from './styles';
+import Testimonial from '../../components/Testimonial';
+import CadastroHeader from './components/CadastroHeader';
+import CadastroForm from './components/CadastroForm';
 
 /* const validationSchema = yup.object.shape({
   nome: yup.string().required(),
@@ -11,16 +19,20 @@ import FormField from '../../components/Form/FormField';
 }); */
 
 export default function Cadastro() {
+  const isMobile = useMediaQuery(breakpoints.XS);
+
   return (
-    <CadastroSection>
-      <SectionTitle>Criar Meu Cadastro</SectionTitle>
-      <SectionSubTitle>Para acompanhar sua contratação de crédito você utilizará seu e-mail e CPF.</SectionSubTitle>
-      <Form>
-        <FormField label="Nome" type="text" placeholder="Digite seu nome completo" />
-        <FormField label="CPF" type="text" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" placeholder="123.456.789-00" />
-        <FormField label="Data de nascimento" type="date" placeholder="30/11/2020" />
-        <FormField label="Senha" type="password" placeholder="Cadastre uma senha" />
-      </Form>
-    </CadastroSection>
+    <CadastroContainer>
+      {!isMobile && <Testimonial />}
+
+      <CadastroFormSection>
+        <CadastroHeader className="Header" />
+        <SectionTitle>Criar Meu Cadastro</SectionTitle>
+        <SectionSubTitle>
+          Para acompanhar sua contratação de crédito você utilizará seu e-mail e CPF.
+        </SectionSubTitle>
+        <CadastroForm />
+      </CadastroFormSection>
+    </CadastroContainer>
   );
 }

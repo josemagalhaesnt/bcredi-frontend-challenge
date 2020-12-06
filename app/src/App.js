@@ -1,18 +1,12 @@
 import React from 'react';
 
-import Header from './components/Header';
-import Testimonial from './components/Testimonial';
-
-import Cadastro from './pages/Cadastro/index';
+import ROUTES, { RenderRoutes } from './routes';
 
 export default function App() {
   return (
     <div className="App">
-      <Testimonial />
-
       <main className="Main">
-        <Header className="Header" />
-        <Cadastro />
+        <RenderRoutes routes={ROUTES} />
       </main>
     </div>
   );

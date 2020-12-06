@@ -11,7 +11,8 @@ const Form = ({ children }) => {
 };
 
 Form.propTypes = {
-  children: PropTypes.oneOf([PropTypes.node, PropTypes.arrayOf(PropTypes.node)]).isRequired,
+  children: PropTypes.oneOf([PropTypes.node, PropTypes.arrayOf(PropTypes.node)])
+    .isRequired,
 };
 
 export default Form;

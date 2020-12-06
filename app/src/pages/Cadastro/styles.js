@@ -1,13 +1,17 @@
 import styled from 'styled-components';
 
-export const CadastroSection = styled.section`
+export const CadastroContainer = styled.div`
+  display: flex;
+  flex: 1;
+`;
+
+export const CadastroFormSection = styled.section`
   width: 100%;
   display: flex;
   flex-direction: column;
   flex: 1;
   justify-content: center;
   align-items: center;
-  margin: 38px 0;
 `;
 
 export const SectionTitle = styled.h3`

@@ -1,9 +1,9 @@
 import React from 'react';
 
+import headerLogo from '../../../../assets/img/logo.svg';
 import HeaderContainer from './styles';
-import headerLogo from '../../assets/img/logo.svg';
 
-const Header = () => {
+const CadastroHeader = () => {
   return (
     <HeaderContainer>
       <img src={headerLogo} alt="BCredi" />
@@ -11,4 +11,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default CadastroHeader;

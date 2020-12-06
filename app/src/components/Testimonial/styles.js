@@ -19,7 +19,6 @@ export const TestimonialContainer = styled.aside`
   align-items: flex-end;
   padding: 5%;
   width: 35%;
-  height: 100vh;
 `;
 
 const TestimonialText = styled.span`
